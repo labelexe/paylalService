@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  paylal_db:
+    image: postgres:16
+    restart: always
+    environment:
+      POSTGRES_DB: ${PG_DB}
+      POSTGRES_USER: ${PG_USER}
+      POSTGRES_PASSWORD: ${PG_PASSWORD}
+    ports:
+      - "5666:5432"
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8053:8000"
+    depends_on:
+      - paylal_db
+

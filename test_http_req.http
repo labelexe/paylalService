@@ -1,0 +1,53 @@
+### POST запрос для создания пользователя
+POST http://localhost:8053/users/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "payment_methods": []
+}
+
+### GET запрос для получения информации о пользователе
+GET http://localhost:8053/users/1 HTTP/1.1
+
+### PUT запрос для обновления информации о пользователе
+PUT http://localhost:8053/users/1 HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "payment_methods": []
+}
+
+### DELETE запрос для удаления информации о пользователе
+DELETE http://localhost:8053/users/1 HTTP/1.1
+
+### POST запрос для создания платежного метода
+POST http://localhost:8053/payment_methods/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Visa",
+  "logo_url": "http://example.com/logo.png",
+  "short_name": "visa",
+  "description": "Visa credit card"
+}
+
+### GET запрос для получения информации о платежном методе
+GET http://localhost:8053/payment_methods/1 HTTP/1.1
+
+### PUT запрос для обновления информации о платежном методе
+PUT http://localhost:8053/payment_methods/1 HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Visa",
+  "logo_url": "http://example.com/logo.png",
+  "short_name": "visa",
+  "description": "Visa credit card"
+}
+
+### DEL запрос для удаления информации о платежном методе
+DELETE http://localhost:8053/payment_methods/1 HTTP/1.1
